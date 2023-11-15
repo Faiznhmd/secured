@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { SiDatabricks } from 'react-icons/si';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
@@ -17,10 +18,18 @@ const Navbar = () => {
           <h1>secured</h1>
         </div>
         <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
-          <li>Home</li>
-          <li>Recovery</li>
-          <li>Cloud</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/recovery">Recovery</Link>
+          </li>
+          <li>
+            <Link to="/cloud">Cloud</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <button>Sign In</button>
         </ul>
         <div className="hamburger" onClick={handleNav}>
