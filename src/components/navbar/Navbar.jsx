@@ -9,7 +9,8 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
   return (
-    <div className="Navbar">
+    <div name="top" className="Navbar">
+      {/* name top is taken from react scroll */}
       <div className="container">
         <div className="logo">
           <SiDatabricks className="icon" />
